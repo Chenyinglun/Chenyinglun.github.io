@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>通过直流生成交流 | Learning_Park</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="工科基础," />
+  
+
+  <meta name="description" content="说在题外噢，不知不觉过了十二点，考完英语四级到现在一直想写。一直有很多待办事项，现在才有空写写。
+为什么觉得忙呢，感觉最近好多比赛没有去参加，但是我选择认真读懂电路先，不然也只是像某些比赛也只是摆弄模块，呵呵。有很多时候，人生一帆风顺，以及诸事不顺的想法会在你急躁的阶段特别容易显现出来。学做一棵耐心的竹，生长生长，自己知道。
+还没引入正题，说说最近做的一个实验，直流生成方波，三角波以及正弦波。
+因">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通过直流生成交流">
+<meta property="og:url" content="http://yoursite.com/2016/06/19/通过直流生成交流/index.html">
+<meta property="og:site_name" content="Learning_Park">
+<meta property="og:description" content="说在题外噢，不知不觉过了十二点，考完英语四级到现在一直想写。一直有很多待办事项，现在才有空写写。
+为什么觉得忙呢，感觉最近好多比赛没有去参加，但是我选择认真读懂电路先，不然也只是像某些比赛也只是摆弄模块，呵呵。有很多时候，人生一帆风顺，以及诸事不顺的想法会在你急躁的阶段特别容易显现出来。学做一棵耐心的竹，生长生长，自己知道。
+还没引入正题，说说最近做的一个实验，直流生成方波，三角波以及正弦波。
+因">
+<meta property="og:image" content="http://7xvps4.com1.z0.glb.clouddn.com/2016QQ%E6%88%AA%E5%9B%BE20160626232518.jpg">
+<meta property="og:image" content="http://7xvps4.com1.z0.glb.clouddn.com/2016shiboqi.jpg">
+<meta property="og:image" content="http://7xvps4.com1.z0.glb.clouddn.com/2016shiboqi2.jpg">
+<meta property="og:image" content="http://7xvps4.com1.z0.glb.clouddn.com/2016shiboqi3.jpg">
+<meta property="og:image" content="http://image64.360doc.com/DownloadImg/2013/09/0722/35049340_1.jpg">
+<meta property="og:updated_time" content="2016-06-26T16:30:07.442Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="通过直流生成交流">
+<meta name="twitter:description" content="说在题外噢，不知不觉过了十二点，考完英语四级到现在一直想写。一直有很多待办事项，现在才有空写写。
+为什么觉得忙呢，感觉最近好多比赛没有去参加，但是我选择认真读懂电路先，不然也只是像某些比赛也只是摆弄模块，呵呵。有很多时候，人生一帆风顺，以及诸事不顺的想法会在你急躁的阶段特别容易显现出来。学做一棵耐心的竹，生长生长，自己知道。
+还没引入正题，说说最近做的一个实验，直流生成方波，三角波以及正弦波。
+因">
+<meta name="twitter:image" content="http://7xvps4.com1.z0.glb.clouddn.com/2016QQ%E6%88%AA%E5%9B%BE20160626232518.jpg">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=eaf5ab1e" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?268f1bd3d8e64290ea3c3bf529129a15";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#说在题外"><span class="toc-text">说在题外</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实验"><span class="toc-text">实验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#原理"><span class="toc-text">原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#准备"><span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#过程"><span class="toc-text">过程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方波："><span class="toc-text">方波：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三角波："><span class="toc-text">三角波：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#正弦波："><span class="toc-text">正弦波：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-通过直流生成交流" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">通过直流生成交流</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.06.19</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>陈影伦</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/技术/">技术</a>
+  </span>
+
+
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="说在题外"><a href="#说在题外" class="headerlink" title="说在题外"></a>说在题外</h2><p>噢，不知不觉过了十二点，考完英语四级到现在一直想写。一直有很多待办事项，现在才有空写写。</p>
+<p>为什么觉得忙呢，感觉最近好多比赛没有去参加，但是我选择认真读懂电路先，不然也只是像某些比赛也只是摆弄模块，呵呵。有很多时候，人生一帆风顺，以及诸事不顺的想法会在你急躁的阶段特别容易显现出来。学做一棵耐心的竹，生长生长，自己知道。</p>
+<p>还没引入正题，说说最近做的一个实验，<strong>直流生成方波，三角波以及正弦波。</strong></p>
+<p>因为学电的，能把信号的转换用透了是比较重要的。所以，平时，对于信号转换就特别留意。刚好这学期学了不少相关知识，也顺便做了个实验。收集，积累是比较重要的。</p>
+<h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>如图：<br><img src="http://7xvps4.com1.z0.glb.clouddn.com/2016QQ%E6%88%AA%E5%9B%BE20160626232518.jpg" alt=""></p>
+<p><strong>通过运放振荡生成方波，方波通过积分器产生三角波，三角波通过RC耦合磨圆成正弦波</strong></p>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul>
+<li>面包板</li>
+<li>杜邦线以及连接线</li>
+<li>双直流稳定追踪电源（为什么）</li>
+<li>示波器</li>
+</ul>
+<p>元件：</p>
+<ul>
+<li>ua741运放芯片   X2</li>
+<li>电位器100k X3</li>
+<li>3.3uF电解电容  x2</li>
+<li>0.1uf电解电容   X1</li>
+<li>10k电阻    X5</li>
+<li>1k电阻   X2</li>
+<li></li>
+</ul>
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><ol>
+<li>把元件按照原理图连接好。使用面包板前请查看面包板如何使用。</li>
+<li>把电源调整至12v，两端都要。</li>
+<li>一端电源正与另一端电源负相接，即为地，甩出的正即+12，负即-12，，将正负电源接到板上，地线端连到面包板地线。</li>
+<li>将示波器打开，调整至直流耦合，探头地连地，探头待会连接输出端。</li>
+<li>观察，旋钮滑动电阻至合适的频率和幅度</li>
+</ol>
+<p><strong>这里放出我第一次成功实验的图片</strong></p>
+<h4 id="方波："><a href="#方波：" class="headerlink" title="方波："></a>方波：</h4><p> <img src="http://7xvps4.com1.z0.glb.clouddn.com/2016shiboqi.jpg" alt=""></p>
+<h4 id="三角波："><a href="#三角波：" class="headerlink" title="三角波："></a>三角波：</h4><p><img src="http://7xvps4.com1.z0.glb.clouddn.com/2016shiboqi2.jpg" alt=""></p>
+<h4 id="正弦波："><a href="#正弦波：" class="headerlink" title="正弦波："></a>正弦波：</h4><p><img src="http://7xvps4.com1.z0.glb.clouddn.com/2016shiboqi3.jpg" alt=""></p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>注意正12V以及负12V 接法:<br>由于我们电路是直流变交流，用的是运放振荡产生交流，所以用到的运放是双源运放，用到<strong>两个电源</strong>。即有正电源和负电源，一端电源正与另一端电源负相接，甩出的两条分别为正负，中间相连部分为地</li>
+<li>注意运放引脚定义 （接反电源会损坏芯片）</li>
+<li><img src="http://image64.360doc.com/DownloadImg/2013/09/0722/35049340_1.jpg" alt=""></li>
+<li>请使用示波器直流耦合测量</li>
+<li>如果电路正确，用示波器测量运放正常工作，无输出为直线的话，那是还没有起振。请把三个滑动电阻调至50%。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>经过这次实验，比较清楚的了解一个信号生成的基本方法，掌握了这三种波形的产生。让我了解，很多时候，数电复杂，成本高昂的电路用模电仅仅是简洁低廉。毕竟模电是自然量转换最为直接的方式。难的是电路的设计，它的设计，要精通计算以及硬件原理特性。很多时候，一个完整的产品是数模结合的。所以模电的计算虽然头疼，并不像数电那样见效快。但仍需要每一个设计电路的人，潜下心来学习。记得电机老师说过，实践虽然好，掌握原理更重要，作为大学生，更是如此。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+
+
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
